@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glowing Animated Buttons</title>
+  <style>
+    /* Animated Gradient Background */
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      background: linear-gradient(270deg, #1f1c2c, #928dab, #1f4037, #99f2c8);
+      background-size: 800% 800%;
+      animation: backgroundShift 20s ease infinite;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .glow-button {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 24px;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Unique Button Effects */
+    .btn1 { background: #007bff; }
+    .btn1:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #007bff;
+    }
+
+    .btn2 { background: #00d4ff; }
+    .btn2:hover {
+      transform: translateX(10px);
+      box-shadow: 0 0 20px #00d4ff;
+    }
+
+    .btn3 { background: #ff3e3e; }
+    .btn3:hover {
+      animation: pulse 0.6s infinite;
+      box-shadow: 0 0 20px #ff3e3e;
+    }
+
+    .btn4 { background: #ff3ec9; }
+    .btn4:hover {
+      animation: shake 0.5s;
+      box-shadow: 0 0 20px #ff3ec9;
+    }
+
+    .btn5 { background: #9b59b6; }
+    .btn5:hover {
+      animation: bounce 0.5s;
+      box-shadow: 0 0 20px #9b59b6;
+    }
+
+    .btn6 { background: #1abc9c; }
+    .btn6:hover {
+      box-shadow: 0 0 20px 10px #1abc9c;
+    }
+
+    .btn7 { background: #2980b9; }
+    .btn7:hover {
+      box-shadow: 0 0 40px 5px #2980b9;
+    }
+
+    .btn8 { background: #f39c12; }
+    .btn8:hover {
+      background: linear-gradient(90deg, #f39c12, #ffd700, #f39c12);
+      background-size: 200% auto;
+      animation: shimmer 1.5s infinite linear;
+      box-shadow: 0 0 25px #f39c12;
+    }
+
+    .btn9 { background: #e74c3c; }
+    .btn9:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px #e74c3c;
+    }
+
+    .btn10 { background: #8e44ad; border: 2px solid transparent; }
+    .btn10:hover {
+      border-color: #fff;
+      box-shadow: 0 0 30px #8e44ad;
+    }
+
+    .btn11 { background: #6c5ce7; }
+    .btn11:hover {
+      box-shadow: inset 0 0 30px #6c5ce7;
+    }
+
+    .btn12 { background: #2ecc71; }
+    .btn12:hover {
+      animation: flicker 1s infinite alternate;
+      box-shadow: 0 0 20px #2ecc71;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Glowing Animated Buttons</h1>
+
+  <div class="button-grid">
+    <button class="glow-button btn1">Scale Glow</button>
+    <button class="glow-button btn2">Slide Right</button>
+    <button class="glow-button btn3">Pulse</button>
+    <button class="glow-button btn4">Shake</button>
+    <button class="glow-button btn5">Bounce</button>
+    <button class="glow-button btn6">Glow Expand</button>
+    <button class="glow-button btn7">Shadow Spread</button>
+    <button class="glow-button btn8">Shimmer</button>
+    <button class="glow-button btn9">Push Up</button>
+    <button class="glow-button btn10">Border Glow</button>
+    <button class="glow-button btn11">Inward Glow</button>
+    <button class="glow-button btn12">Flicker</button>
+  </div>
+
+</body>
+</html>
